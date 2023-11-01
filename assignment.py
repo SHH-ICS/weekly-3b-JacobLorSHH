@@ -1,7 +1,7 @@
 #Options
 #Sizes and corresponding values
-possible_sizes = ('single slice', 'xs', 's', 'm', 'l', 'xl', 'xxl')
-size_pricing = (2, 4, 5, 7, 12, 14, 16)
+possible_sizes = ('large', 'extra-large')
+size_pricing = (6, 10)
 possible_toppings = (0, 1, 2, 3, 4)
 topping_pricing = (0, 1, 1.75, 2.5, 3.35)
 #UI
@@ -12,7 +12,7 @@ while not_satisfied:
     want_pizza = str(input('Do you want a pizza? '))
     if want_pizza == 'n':
         break
-    else:
+    elif want_pizza == 'y':
         #Finding size
         while True:
             size = str(input('What size of pizza would you like?'))
@@ -33,5 +33,7 @@ while not_satisfied:
                     print("You can't have negative toppings or more than 4")
             except ValueError:
                 print('Must be an Integer!')
-        
-print(total * 1.13)
+    
+print("Total: $",total * 1.13)
+print("Tax: $", total * 0.13,)
+print("Before Tax: $", total)
