@@ -11,7 +11,7 @@
 
   <body>
         <!-- Simple Textfield -->
-    <form method="post">
+    <form action="handler.php" method="post">
         <div class="mdl-textfield mdl-js-textfield">
           <input class="mdl-textfield__input" type="text" id="sample1" name="Size">
           <label class="mdl-textfield__label" for="sample1">Size:</label>
@@ -22,8 +22,7 @@
           <label class="mdl-textfield__label" for="sample2">Number of Toppings:</label>
           <span class="mdl-textfield__error">Input must be a number between 1-4!</span>
         </div>
-      </form>
-          <!-- Raised button with ripple -->
+      <!-- Raised button with ripple -->
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
         Done
       </button>
